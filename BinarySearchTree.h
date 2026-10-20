@@ -6,8 +6,8 @@ struct BST {
     int value;
 };
 
-BST* insertElement();
-BST* removeElement();
+BST* insertElement(BST* tree, int value);
+BST* removeElement(int value);
 BST* createEmptyTree();
 
 int height(BST* tree);
