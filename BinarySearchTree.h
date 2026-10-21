@@ -12,7 +12,7 @@ BST* createEmptyTree();
 
 int height(BST* tree);
 int isEmpty(BST* tree);
-int inTree(BST* tree);
+int inTree(BST* tree, int value);
 
 void printTree(BST* tree);
 void deleteTree(BST* tree);

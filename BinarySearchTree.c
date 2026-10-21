@@ -58,3 +58,51 @@ BST* removeElement(BST* tree, int value) {
 
     return tree;
 }
+
+int height(BST* tree) {
+    int rheight = 0;
+    int lheight = 0;
+    if(isEmpty(tree)) {
+        return -1;
+    } else {
+        rheight = height(tree->right);
+        lheight = height(tree->left);
+        if(rheight > lheight) {
+            return 1 + rheight;
+        } else {
+            return 1 + lheight;
+        }
+    }
+}
+
+int inTree(BST* tree, int value) {
+    if(isEmpty(tree)) {
+        return 0;
+    }
+
+    if(value < tree->value) {
+        return inTree(tree->left, value);
+    } else if(value > tree->value) {
+        return inTree(tree->right, value);
+    } else {
+        return 1;
+    }
+}
+
+void printTree(BST* tree) {
+    if(isEmpty(tree)) {
+        return;
+    }
+    printTree(tree->left);
+    printTree(tree->right);
+    printf("%d", tree->value);
+}
+
+void deleteTree(BST* tree) {
+    if(isEmpty(tree)) {
+        return;
+    }
+    deleteTree(tree->left);
+    deleteTree(tree->right);
+    free(tree);
+}
