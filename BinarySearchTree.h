@@ -7,7 +7,7 @@ struct BST {
 };
 
 BST* insertElement(BST* tree, int value);
-BST* removeElement(int value);
+BST* removeElement(BST* tree, int value);
 BST* createEmptyTree();
 
 int height(BST* tree);
