@@ -10,16 +10,19 @@ class AVL {
         };
 
         Node* root;
+
+        int height(Node* node);
+        
+        bool inTree(Node* node, int value);
     public:
-        AVL* insertElement(AVL* tree, int value);
-        AVL* removeElement(AVL* tree, int value);
+        int height();
+        
+        bool inTree(int value);
+        bool isEmpty();
 
-        int height(AVL::Node* tree);
-        int inTree(AVL* tree, int value);
-
-        bool isEmpty(AVL::Node* tree);
-
-        void printTree(AVL* tree);
+        void printTree();
+        void insertElement(int value);
+        void removeElement(int value);
 
         AVL(int value);
         ~AVL();
