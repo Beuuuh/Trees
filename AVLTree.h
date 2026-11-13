@@ -12,8 +12,10 @@ class AVL {
         Node* root;
 
         int height(Node* node);
-        
+
         bool inTree(Node* node, int value);
+
+        void printTree(Node* node);
     public:
         int height();
         

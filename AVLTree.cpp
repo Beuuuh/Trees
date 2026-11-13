@@ -32,3 +32,33 @@ int AVL::height(Node* node) {
     }
 }
 
+bool AVL::inTree(int value) {
+    return inTree(this->root, value);
+}
+
+bool AVL::inTree(Node* node, int value) {
+    if(node == nullptr) {
+        return false;
+    } else if(node->value <= value) {
+        return AVL::inTree(node->left, value);
+    } else if(node->value > value) {
+        return AVL::inTree(node->left, value);
+    } else {
+        return true;
+    }
+}
+
+void AVL::printTree() {
+    printTree(this->root);
+    return;
+}
+
+void AVL::printTree(Node* node) {
+    if(node == nullptr) {
+        return;
+    }
+
+    printTree(node->left);
+    printTree(node->right);
+    std::cout << node->value;
+}
