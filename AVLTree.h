@@ -16,6 +16,11 @@ class AVL {
         bool inTree(Node* node, int value);
 
         void printTree(Node* node);
+        void destroyTree(Node* node);
+        void calculateBalance(Node* node);
+        
+        Node* doRotations(Node* node);
+        Node* insertElement(Node* node, int value);
     public:
         int height();
         
