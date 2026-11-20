@@ -13,6 +13,10 @@ BST* createEmptyTree();
 int height(BST* tree);
 int isEmpty(BST* tree);
 int inTree(BST* tree, int value);
+int leafSum(BST* tree);
+int primeNodes(BST* tree);
+int especificOddNodeAmount(BST* tree);
+int especificPairNodeAmount(BST* tree);
 
 void printTree(BST* tree);
 void deleteTree(BST* tree);
